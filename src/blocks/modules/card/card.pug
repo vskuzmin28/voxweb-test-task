@@ -1,0 +1,19 @@
+mixin card(data)
+    .card(class = data.cardClass)
+        a.card__preview(href="#" title="")
+            .card__price!=data.price
+            img.card__preview-image(src= data.src alt="@@")
+        a.card__country(href="#" title="")!=data.country
+        a.card__title(href="#" title="")!=data.title
+        if data.itemsList
+            ul.card__cities
+                each item in data.items
+                    li.card__cities-item
+                        a.card__cities-link(href = item.link title = item.title)!=item.city
+        .card__detail
+            .card__days!=data.days
+            .card__language!=data.language
+            .card__dates!=data.dates
+            if data.action
+                a.card__action(href="#" title="")!=data.actionTitle
+

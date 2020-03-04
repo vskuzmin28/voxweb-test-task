@@ -1,0 +1,56 @@
+mixin header(data)
+    header.header
+        .header__overlay
+        .header__container
+            .menu
+                .menu__line
+                .menu__line
+                .menu__line
+
+            .header__content
+                form.header__selects(action="/" method="post")
+                    .header__select
+                        select#countrys(name="")
+                            option Страны
+                            optgroup(label="Южная Америка")
+                                option Аргентина
+                                option Бразилия
+                                option Перу
+                                option Уругвай
+                                option Чили
+                                option Эквадор
+                            optgroup(label="Северная Америка")
+                            optgroup(label="Арктика и Антарктика")
+                            optgroup(label="Африка")
+                            optgroup(label="Австралия и Океания")
+                            optgroup(label="Европа")
+                            optgroup(label="Россия")
+                            optgroup(label="Азия")
+                    .header__select
+                        select#countrys(name="")
+                            option Даты
+                    .header__select
+                        select#countrys(name="")
+                            option Тип путешествия
+                            option Аргентина
+                            option Бразилия
+                            option Перу
+                            option Уругвай
+                            option Чили
+                            option Эквадор
+
+                    button.button.button_transparent(type="submit") Найти
+
+                .header__nav
+                    li.header__nav-item
+                        a.header__nav-link(href="#" title="") ПУТЕШЕСТВИЯ
+                    li.header__nav-item
+                        a.header__nav-link(href="#" title="") О НАС
+                    li.header__nav-item
+                        a.header__nav-link(href="#" title="") ОТЗЫВЫ
+                    li.header__nav-item
+                        a.header__nav-link(href="#" title="") БЛОГ
+
+                .header__contacts
+                    a.header__phone(href="tel:74951234567" title="") +7 (495) 123-45-67
+                    a.header__button.button.button_transparent(href="#" title="") ПОДБЕРИТЕ МНЕ ТУР

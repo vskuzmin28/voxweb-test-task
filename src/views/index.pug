@@ -1,0 +1,115 @@
+extends layouts/default
+include helpers/mixins
+include ../blocks/modules/header/header
+include ../blocks/modules/card/card
+include ../blocks/modules/order/order
+
+block variables
+	- const title = "test task"
+
+block content
+	
+	+header
+
+	.main
+		h3.main__title.main__title_upper.main__title_center ЗИМБАБВЕ
+		.main__container.main__container_border
+			+card({
+				cardClass: 'main__card',
+				src: '../img/687_anons-min_480_275_5_90.webp',
+				price: 'от 118 112 Р',
+				country: 'Италия',
+				title: 'Под небом Тосканы',
+				itemsList: true,
+				items: [
+					{link: '#1', city: 'Сансеполькро'},
+					{link: '#2', city: '(Перуджа)'},
+					{link: '#3', city: 'Ассизи'},
+					{link: '#4', city: 'Губбио'},
+					{link: '#5', city: '(Сиена)'},
+					{link: '#6', city: 'Ла Верна'},
+					{link: '#7', city: 'Ангиари'},
+					{link: '#8', city: 'Монтерки'},
+					{link: '#9', city: 'Ареццо'},
+					{link: '#10', city: 'Кортона'},
+					{link: '#11', city: '(Пиенца)'},
+					{link: '#12', city: '(Монтепульчано)'}
+				],
+				days: '8 дней / 7 ночей',
+				language: 'Русский язык',
+				dates: '27.04.19 - 04.05.19и еще 15 дат',
+				action: true,
+				actionTitle: 'Авиаперелет включен!'
+			})
+     
+			+card({
+				cardClass: 'main__card',
+				src: '../img/430_anons_480_275_5_90.webp',
+				price: '140 715 Р',
+				country: 'Исландия',
+				title: 'Майские каникулы в Исландии',
+				itemsList: true,
+				items: [
+					{link: '#', title: '/', city: 'Рейкьявик'},
+					{link: '#', title: '/', city: 'Тингвеллир'},
+					{link: '#', title: '/', city: 'Гюдльфосс'},
+					{link: '#', title: '/', city: 'Скафтафедль'},
+					{link: '#', title: '/', city: 'Сельяландсфосс'},
+					{link: '#', title: '/', city: 'Скоугафосс'},
+					{link: '#', title: '/', city: 'Йёкюльсаурлоун'},
+					{link: '#', title: '/', city: 'Голубая'},
+					{link: '#', title: '/', city: 'Лагуна'},
+					{link: '#', title: '/', city: 'Снайфельсйёкутль'},
+					{link: '#', title: '/', city: 'Arnarstapi'},
+					{link: '#', title: '/', city: 'Рейкьявик'}
+				],
+				days: '8 дней / 7 ночей',
+				language: 'Русский язык',
+				dates: '27.04.19 - 04.05.19',
+			})
+			+card({
+				cardClass: 'main__card',
+				src: '../img/640anons_480_275_5_90.webp',
+				price: '37 302 Р',
+				country: 'Турция',
+				title: 'Открытие Турции',
+				itemsList: true,
+				items: [
+					{link: '#', title: '/', city: 'Стамбул'},
+					{link: '#', title: '/', city: 'Анкара'},
+					{link: '#', title: '/', city: 'Каппадокия'},
+					{link: '#', title: '/', city: 'Конья'},
+					{link: '#', title: '/', city: 'Памуккале'},
+					{link: '#', title: '/', city: 'Эфес'},
+					{link: '#', title: '/', city: 'Кушадасы'},
+					{link: '#', title: '/', city: 'Пергам'},
+					{link: '#', title: '/', city: 'Ассос'},
+					{link: '#', title: '/', city: 'Троя'},
+					{link: '#', title: '/', city: 'Стамбул'}
+				],
+				days: '8 дней / 7 ночей',
+				language: 'Русский язык',
+				dates: '28.04.19 - 05.05.19 и еще 3 даты',
+			})
+			+card({
+				cardClass: 'main__card',
+				src: '../img/117_anons-min_480_275_5_90.webp',
+				price: '145 000 Р',
+				country: 'Норвегия, Шпицберген',
+				title: 'От Свальбарда до Груманта',
+				days: '8 дней / 7 ночей',
+				language: 'Русский язык',
+				dates: '27.04.19 - 04.05.19 и еще 15 дат',
+				action: true,
+				actionTitle: 'Гарантированный тур!'
+			})
+
+		h3.main__title.main__title_center.main__title_left-mobile Заявка на подбор путешествия
+		.main__container
+			+order({
+				
+			})
+			
+block scripts
+	script(src="js/main.js")
+	script(src="js/vendor.js")

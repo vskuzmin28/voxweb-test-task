@@ -1,0 +1,83 @@
+mixin order(data)
+    form.order(action="/" method="post")
+        .order__indent
+            .order__title Немного о вас
+        .order__body
+            .order__field
+                .input-group
+                    label.label 
+                        | ИМЯ 
+                        span.necessarily *
+                    input.input(type="text" name="name")
+            .order__field
+                .input-group
+                    label.label ТЕЛЕФОН
+                    input.input(type="text" name="phone" placeholder="+7___ ___ __ __")
+        .order__indent
+            .order__title О путешествии
+        .order__body
+            .order__field.error-input
+                label.label 
+                    | КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ? 
+                    span.necessarily *
+                input.input(type="text" name="city" placeholder="Континент, страна или город")
+                .error-input__text Укажите континент, страну или город
+            .order__field
+                label.label КОГДА?
+                input.input(type="text" name="date" placeholder="Даты или временной  интервал")
+        .order__body
+            .order__field
+                .order__indent
+                    .order__title УДОБНЫЙ СПОСОБ СВЯЗИ
+                .checkbox-group.checkbox-group_flex-row(style="flex-wrap: wrap")
+                    .order__checkbox.checkbox
+                        input(type="checkbox" id="1" name="viber" checked)
+                        label.label(for="1") Viber
+                    .order__checkbox.checkbox
+                        input(type="checkbox" id="2" name="whatsapp")
+                        label.label(for="2") Whatsapp
+                    .order__checkbox.checkbox
+                        input(type="checkbox" name="mail")
+                        label.label Почта
+                    .order__checkbox.checkbox
+                        input(type="checkbox" name="tel")
+                        label.label Телефон
+            .order__field.order__field_indent
+                .order__indent
+                    .order__title ОТКУДА УЗНАЛИ О НАС
+                .checkbox-group.checkbox-group_flex-row
+                    .order__checkbox.checkbox
+                        input(type="checkbox" name="inet")
+                        label.label Интернет
+                    .order__checkbox.checkbox
+                        input(type="checkbox" name="friends")
+                        label.label Интернет
+                    .order__checkbox.checkbox
+                        input(type="checkbox" name="spy")
+                        label.label Соц. сети
+                    .order__checkbox.checkbox
+                        input(type="checkbox" name="traveled")
+                        label.label Уже ездил
+        .order__body.order__body_column
+            .order__field
+                .order__checkbox.checkbox-small
+                    input(type="checkbox" id="4" name="sub" checked)
+                    label.label(for="4")
+                        p Получать свежие предложения по электронной почте
+                        span Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+            .order__field
+                .order__checkbox.checkbox-small.error
+                    input(type="checkbox" id="5" name="personal")
+                    label.label(for="5")
+                        p 
+                            | С обработкой своих персональных данных согласен. 
+                            span.necessarily *
+                        span Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+
+            p.order__necessarily
+                span.necessarily * 
+                | Поля, которые надо обязательно заполнить
+
+            button.button.button_yellow.button_long
+                | ОТПРАВИТЬ
+                img(src="../img/arrow-right.svg" alt="@@")
